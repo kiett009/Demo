@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tính Chu Vi & Diện Tích</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Tính Chu Vi & Diện Tích Các Hình Học</h1>
+
+    <!-- Hình ảnh chọn -->
+    <div style="text-align: center;">
+      <img src="images/vuong.png" alt="Hình vuông" onclick="showForm('vuong')" />
+      <img src="images/hcn.png" alt="Hình chữ nhật" onclick="showForm('chunhat')" />
+      <img src="images/tron.png" alt="Hình tròn" onclick="showForm('tron')" />
+      <img src="images/thang.png" alt="Hình thang" onclick="showForm('thang')" />
+    </div>
+
+    <!-- Form Hình Vuông -->
+    <section id="vuong">
+      <h2>Hình Vuông</h2>
+      <label>Cạnh (a):</label>
+      <input type="number" id="a_vuong" /><br />
+      <label>Đơn vị:</label>
+      <select id="unit_vuong">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+        <option value="inch">inch</option>
+      </select><br />
+      <button onclick="tinhVuong()">Tính</button>
+      <button onclick="resetVuong()">Nhập lại</button>
+      <div id="kq_vuong" class="result"></div>
+    </section>
+
+    <!-- Form Hình Chữ Nhật -->
+    <section id="chunhat">
+      <h2>Hình Chữ Nhật</h2>
+      <label>Chiều dài:</label>
+      <input type="number" id="dai" /><br />
+      <label>Chiều rộng:</label>
+      <input type="number" id="rong" /><br />
+      <label>Đơn vị:</label>
+      <select id="unit_chunhat">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+        <option value="inch">inch</option>
+      </select><br />
+      <button onclick="tinhChuNhat()">Tính</button>
+      <button onclick="resetChuNhat()">Nhập lại</button>
+      <div id="kq_chunhat" class="result"></div>
+    </section>
+
+    <!-- Form Hình Tròn -->
+    <section id="tron">
+      <h2>Hình Tròn</h2>
+      <label>Bán kính (r):</label>
+      <input type="number" id="r" /><br />
+      <label>Đơn vị:</label>
+      <select id="unit_tron">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+        <option value="inch">inch</option>
+      </select><br />
+      <button onclick="tinhTron()">Tính</button>
+      <button onclick="resetTron()">Nhập lại</button>
+      <div id="kq_tron" class="result"></div>
+    </section>
+
+    <!-- Form Hình Thang -->
+    <section id="thang">
+      <h2>Hình Thang</h2>
+      <label>Đáy lớn (a):</label>
+      <input type="number" id="daylon" /><br />
+      <label>Đáy bé (b):</label>
+      <input type="number" id="daybe" /><br />
+      <label>Chiều cao (h):</label>
+      <input type="number" id="cao" /><br />
+      <label>Cạnh bên 1:</label>
+      <input type="number" id="canh1" /><br />
+      <label>Cạnh bên 2:</label>
+      <input type="number" id="canh2" /><br />
+      <label>Đơn vị:</label>
+      <select id="unit_thang">
+        <option value="cm">cm</option>
+        <option value="m">m</option>
+        <option value="inch">inch</option>
+      </select><br />
+      <button onclick="tinhThang()">Tính</button>
+      <button onclick="resetThang()">Nhập lại</button>
+      <div id="kq_thang" class="result"></div>
+    </section>
+  </body>
+</html>
